@@ -15,4 +15,19 @@ export default class HomeScreen {
         return await this.resultSearch.getText()
     }
 
+    //elements
+
+    get btnMore() { return $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/nav_tab_more")')}
+    get btnEnterOrJoin() { return $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/main_drawer_account_container")')}
+
+    //interactions
+
+    async clickBtnMore() {
+        await this.btnMore.click()
+    }
+
+    async clickBtnEnterOrJoin() {
+        await this.btnEnterOrJoin.click()
+    }
+
 }
