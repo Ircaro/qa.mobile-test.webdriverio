@@ -24,8 +24,8 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        // './test/specs/**/*.js'
-        './test/specs/test.e2e.js'
+        './test/specs/**/*.js'
+        // './test/specs/test.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -59,7 +59,7 @@ export const config = {
         'appium:deviceName': 'secret_global',
         'appium:appPackage': 'org.wikipedia.alpha',
         'appium:appActivity': 'org.wikipedia.main.MainActivity',
-        'appium:udid': '7H8PHMEYKJNJMVO7',
+        // 'appium:udid': '7H8PHMEYKJNJMVO7',
         'appium:platformVersion': '13.0',
         'appium:automationName': 'UiAutomator2',
         'appium:app': path.resolve(`./app/Wikipedia.apk`),
