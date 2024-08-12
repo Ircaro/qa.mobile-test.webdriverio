@@ -1,7 +1,7 @@
-import CreateAccountScreen from '../pageobjects/home/createAccount/createAccount.screen.js'
-import Login from '../pageobjects/home/createAccount/login/login.screen.js'
-import HomeScreen from '../pageobjects/home/home.screen.js'
-import OnboardingScreen from '../pageobjects/onboarding/onboarding.screen.js'
+import CreateAccountScreen from '../page/home/createAccount/createAccount.elements.screen.js/index.js'
+import Login from '../page/home/createAccount/login/login.screen.js'
+import HomeScreen from '../page/home/home.screen.js'
+import OnboardingScreen from '../page/onboarding/onboarding.elements.screen.js/index.js'
 
 const onboarding = new OnboardingScreen()
 const home = new HomeScreen()

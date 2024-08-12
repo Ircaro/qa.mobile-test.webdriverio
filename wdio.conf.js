@@ -25,7 +25,7 @@ export const config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        './test/specs/testLoginInvalidCredentials.e2e.js'
+        './test/specs/test.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -63,7 +63,7 @@ export const config = {
         'appium:platformVersion': '13.0',
         'appium:automationName': 'UiAutomator2',
         'appium:app': path.resolve(`./app/Wikipedia.apk`),
-        // 'appium:unicodeKeyboard': true,
+        'appium:unicodeKeyboard': true,
         "appium:autoGrantPermissions": true
     }],
 
