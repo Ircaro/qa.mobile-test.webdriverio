@@ -1,4 +1,4 @@
-import HomeElementsScreen from "./home.elements.screen"
+import HomeElementsScreen from "./home.elements.screen.js"
 
 export default class HomeInteractionsScreen extends HomeElementsScreen{
     

@@ -1,4 +1,4 @@
-import OnboardingElementsScreen from "./onboarding.elements.screen";
+import OnboardingElementsScreen from "./onboarding.elements.screen.js";
 
 export default class OnboardingInteractionsScreen extends OnboardingElementsScreen{
     async clickBtnSkip () {

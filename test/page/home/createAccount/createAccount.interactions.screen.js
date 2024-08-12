@@ -1,5 +1,7 @@
-export default class CreateAccountInteractionsScreen {
+import CreateAccountElementsScreen from "./createAccount.elements.screen.js";
+
+export default class CreateAccountInteractionsScreen extends CreateAccountElementsScreen{
     async clickBtnEnter() {
-        await this.btnEnter.click()
+        await super.btnEnter.click()
     }
 }

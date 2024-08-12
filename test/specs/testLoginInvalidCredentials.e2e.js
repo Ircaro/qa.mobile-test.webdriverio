@@ -1,26 +1,26 @@
-import CreateAccountScreen from '../page/home/createAccount/createAccount.elements.screen.js/index.js'
-import Login from '../page/home/createAccount/login/login.screen.js'
-import HomeScreen from '../page/home/home.screen.js'
-import OnboardingScreen from '../page/onboarding/onboarding.elements.screen.js/index.js'
+import CreateAccountActionsScreen from '../page/home/createAccount/createAccount.Actions.screen.js'
+import LoginActionsScreen from '../page/home/createAccount/login/login.actions.screen.js'
+import LoginQuestionsScreen from '../page/home/createAccount/login/login.questions.screen.js'
+import HomeActionsScreen from '../page/home/home.actions.screen.js'
+import OnboardingInteractionsScreen from '../page/onboarding/onboarding.interactions.screen.js'
 
-const onboarding = new OnboardingScreen()
-const home = new HomeScreen()
-const createAccount = new CreateAccountScreen()
-const login = new Login()
+const onboardingActions = new OnboardingInteractionsScreen()
+const homeActions = new HomeActionsScreen()
+const createAccountActions = new CreateAccountActionsScreen()
+const loginActions = new LoginActionsScreen()
+const loginQuestions = new LoginQuestionsScreen()
 
 const invalidUser = "Teste.doido"
 const invalidPassword = "Senha!doida"
 
-const expectResult = "O nome de utilizador ou a palavra-passe inseridos estão incorretos.\nTente novamente, por favor."
+const errorText = "O nome de utilizador ou a palavra-passe inseridos estão incorretos.\nTente novamente, por favor."
 
 describe ('Wikipedia', () => {
     it('Validando login com credenciais inválidas', async () => {
-        await onboarding.clickBtnSkip()
-        await home.clickBtnMore()
-        await home.clickBtnEnterOrJoin()
-        await createAccount.clickBtnEnter()
-        await login.loginWithInvalidCredentials(invalidUser, invalidPassword)
-
-        expect(await login.getTextError()).toBe(expectResult)
+        await onboardingActions.clickBtnSkip()
+        await homeActions.enterCreateAccountScreen()
+        await createAccountActions.clickBtnEnter()
+        await loginActions.loginWithInvalidCredentials(invalidUser, invalidPassword)
+        await loginQuestions.isTheErrorTextTheSame(errorText)
     })
 })

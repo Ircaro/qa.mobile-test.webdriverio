@@ -71,6 +71,7 @@ export const config = {
     //
     // ===================
     // Test Configurations
+
     // ===================
     // Define all options that are relevant for the WebdriverIO instance here
     //
